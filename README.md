@@ -14,5 +14,5 @@ The projects are in the order of advancements in the algorithms used in Deep RL.
   2. Install the dependencies 
     
           git clone https://github.com/saswat0/peely.git
-          cd Deep-Reinforcement-Learning/python
+          cd peely/python
           pip install .

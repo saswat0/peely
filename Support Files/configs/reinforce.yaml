@@ -1,0 +1,16 @@
+run-title: mountaincar-2
+environment: MountainCar-v0
+
+### training ###
+epochs: 1000
+episodes: 10
+lr: 1.e-2
+weight-decay: 1.e-4
+gamma: 0.99
+render: true
+
+### model ###
+architecture:
+  - 12
+  - 12
+  - 12

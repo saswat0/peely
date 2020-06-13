@@ -1,0 +1,53 @@
+## Run Parameters ##
+run-title: p-ddqn-1
+train: true 
+
+## Environment ##
+environment: CartPole-v0 # {CartPole-v0, MountainCar-v0, LunarLander-v2, CarRacing-v0}
+solved-criterion: 195 # {195, -110, 200, 900}
+max-episode-steps: 200 # {200, 200, 1000, 1000}
+
+## DQN Variant ##
+dqn-type: DDQN
+
+## Training ##
+batch-size: 128
+gamma: 0.99
+episodes: 50_000
+
+## Priortized Experience Replay ##
+prioritized-replay: true 
+p-alpha: 0.6
+p-beta-init: 0.4
+p-eps: 1.e-6
+
+## Network ##
+architecture:
+  - 64
+  - 64
+
+## Replay Buffer ##
+max-experiences: 20_000
+min-experiences: 128
+
+## Optimizer ##
+lr-init: 5.e-4
+lr-step: 25
+lr-gamma: 0.9
+weight-decay: 1.e-4
+
+## Exploration ##
+epsilon-start: 0.9
+epsilon-min: 0.05
+epsilon-decay: 0.99
+
+## Target Update ##
+tau: 0.999
+
+## Paths ##
+save-path: models
+load-path: ./models/ddqn-lunar-v2.pt
+
+## Visualize ##
+visualize: false
+vis-episodes: 10
